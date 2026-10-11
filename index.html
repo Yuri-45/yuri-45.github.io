@@ -1,1769 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta
-    name="description"
-    content="Alexis Santos — personal portfolio, marketing experience, projects, and professional development."
-  >
-  <title>Alexis Santos Personal Portfolio</title>
-
-  <!--
-    UPLOAD THESE FILES INTO AN images FOLDER:
-
-    COVER
-    images/cover.jpg
-
-    INTRODUCTION
-    images/alexis-portrait.jpg
-
-    ABOUT ME GALLERY — same order as your Adobe portfolio
-    images/sisters.jpg
-    images/new-york-city.jpg
-    images/friend.jpg
-    images/italy.jpg
-    images/columbia.jpg
-
-    BACKGROUND & EXPERIENCE
-    images/background-experience.jpg
-
-    CAREER GROWTH BACKGROUNDS — same order as Adobe
-    images/career-01.jpg  — NYC / Brooklyn Bridge sunset
-    images/career-02.jpg  — Networking background
-    images/career-03.jpg  — Projects background
-    images/career-04.jpg  — Certifications / books background
-    images/career-05.jpg  — Internships background
-    images/career-06.jpg  — Personal Brand / sand background
-
-    CAREER GROWTH CONTENT IMAGES
-    images/break-point-speaker.jpg
-    images/ketel-one-team.jpg
-    images/waitressing-wednesday.jpg
-
-    WHERE I SHOW UP
-    images/ama-derrick-boatwright.jpg
-    images/ama-aleka-selig.jpg
-    images/ama-caroline-lee.jpg
-    images/ama-case-competition.jpg
-    images/capstone-building.jpg
-    images/animal-rescue.jpg
-
-    FINAL PHOTO GALLERY
-    images/closing-left.jpg
-    images/closing-center.jpg
-    images/closing-right.jpg
-
-    Filenames are case-sensitive.
-    If your files are PNGs instead of JPGs, change the matching
-    .jpg references below to .png.
-
-    The resume button currently uses your original OneDrive link.
-    To host your resume in GitHub, upload files/resume.pdf and
-    change that button's href to "files/resume.pdf".
-  -->
-
-  <!-- Original Adobe font stylesheet from your saved portfolio. -->
-  <link rel="preconnect" href="https://use.typekit.net">
-  <link
-    rel="stylesheet"
-    href="https://use.typekit.net/pgs0bob.css?buster=10"
-  >
-
-  <style>
-    :root {
-      --paper: #f2e7cb;
-      --ink: #111a0b;
-      --black: #000;
-      --heading-font: aboreto, sans-serif;
-      --body-font: montserrat, sans-serif;
-      --content-width: 60%;
-    }
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background: var(--paper);
-      color: var(--ink);
-      font-family: var(--body-font);
-      font-size: 19px;
-      font-weight: 400;
-      line-height: 1.6;
-      overflow-wrap: break-word;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
-    a {
-      color: var(--black);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
-    a:hover {
-      color: #1c4a22;
-    }
-
-    a:focus-visible,
-    button:focus-visible {
-      outline: 3px solid #1c4a22;
-      outline-offset: 5px;
-    }
-
-    h1,
-    h2,
-    h3 {
-      color: var(--black);
-      font-family: var(--heading-font);
-      font-weight: 400;
-      overflow-wrap: normal;
-    }
-
-    h2 {
-      margin: 0 0 28px;
-      font-size: 43px;
-      line-height: 1.4;
-    }
-
-    h3 {
-      margin: 0 0 24px;
-      font-size: 26px;
-      line-height: 1.5;
-    }
-
-    p {
-      margin: 0 0 28px;
-    }
-
-    p:last-child {
-      margin-bottom: 0;
-    }
-
-    strong,
-    b {
-      font-weight: 700;
-    }
-
-    figure {
-      margin: 0;
-    }
-
-    figcaption {
-      margin: 10px 0 0;
-      font-size: 15px;
-      font-weight: 400;
-      line-height: 1.6;
-    }
-
-    .center {
-      text-align: center;
-    }
-
-    .right {
-      text-align: right;
-    }
-
-    .section {
-      position: relative;
-      background: var(--paper);
-    }
-
-    .container {
-      width: var(--content-width);
-      margin: 0 auto;
-    }
-
-    .section-pad {
-      padding: 80px 0;
-    }
-
-    .section-pad-top {
-      padding-top: 80px;
-    }
-
-    .section-pad-bottom {
-      padding-bottom: 80px;
-    }
-
-    .rule {
-      margin: 26px auto;
-      overflow: hidden;
-      color: var(--ink);
-      font-family: var(--body-font);
-      font-size: 19px;
-      font-weight: 400;
-      line-height: 1.6;
-      white-space: nowrap;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 7px 17px;
-      border: 0;
-      background: var(--black);
-      color: var(--paper);
-      font-family: var(--heading-font);
-      font-size: 15px;
-      font-weight: 400;
-      line-height: 1.6;
-      text-align: center;
-      text-decoration: none;
-      transition: background-color 150ms ease;
-    }
-
-    .button:hover {
-      background: #262626;
-      color: var(--paper);
-    }
-
-    /* FULL-SCREEN COVER */
-
-    .cover {
-      position: relative;
-      display: grid;
-      min-height: 100vh;
-      min-height: 100svh;
-      place-items: center;
-      overflow: hidden;
-      background: #484848;
-      color: #fff;
-      text-align: center;
-    }
-
-    .cover-image {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: 50% 50%;
-    }
-
-    .cover::after {
-      position: absolute;
-      inset: 0;
-      content: "";
-      background: linear-gradient(
-        0deg,
-        transparent 0%,
-        rgb(0 0 0 / 25%) 25%,
-        rgb(0 0 0 / 50%) 50%,
-        rgb(0 0 0 / 25%) 75%,
-        transparent 100%
-      );
-    }
-
-    .cover-title {
-      position: relative;
-      z-index: 1;
-      width: 89%;
-      padding: 64px 5%;
-    }
-
-    .cover h1 {
-      margin: 0;
-      color: #fff;
-      font-size: 66px;
-      line-height: 1.4;
-      text-shadow: 0 2px 2px rgb(0 0 0 / 25%);
-    }
-
-    .cover p {
-      margin: 16px 0 0;
-      color: #fff;
-      font-size: 20px;
-      font-weight: 300;
-      line-height: 1.5;
-      text-shadow: 0 2px 2px rgb(0 0 0 / 25%);
-    }
-
-    .scroll-hint {
-      position: absolute;
-      z-index: 2;
-      bottom: 32px;
-      left: 50%;
-      width: 24px;
-      height: 24px;
-      border-right: 2px solid #fff;
-      border-bottom: 2px solid #fff;
-      transform: translateX(-50%) rotate(45deg);
-    }
-
-    /* CONTACT */
-
-    .contact h3 {
-      margin-bottom: 16px;
-    }
-
-    .contact-details {
-      line-height: 1.6;
-    }
-
-    /* IMAGE / TEXT SPLIT SECTIONS */
-
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: stretch;
-    }
-
-    .split-image {
-      position: relative;
-      min-height: 650px;
-      overflow: hidden;
-      background: #d5c9b0;
-    }
-
-    .split-image > img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .portrait > img {
-      object-position: 97.843% 29.959%;
-    }
-
-    .split-copy {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 64px 12%;
-    }
-
-    .split-copy .button {
-      align-self: flex-start;
-      margin-top: 4px;
-    }
-
-    blockquote {
-      margin: 0 0 32px;
-      padding: 0.25em 1em;
-      border-left: 5px solid rgb(0 0 0 / 90%);
-      color: var(--black);
-      font-size: 24px;
-      font-weight: 400;
-      line-height: 1.5;
-      text-align: left;
-    }
-
-    .short-rule {
-      margin: 0 0 28px;
-    }
-
-    /* PHOTO GALLERIES */
-
-    .gallery {
-      padding: 28px 0;
-    }
-
-    .photo-row {
-      display: grid;
-      gap: 6px;
-      margin-bottom: 6px;
-    }
-
-    .photo-row:last-child {
-      margin-bottom: 0;
-    }
-
-    .photo-row a {
-      display: block;
-      min-width: 0;
-      overflow: hidden;
-      background: #ddd1b5;
-    }
-
-    .photo-row img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 250ms ease;
-    }
-
-    .photo-row a:hover img {
-      transform: scale(1.025);
-    }
-
-    /*
-      Original image proportions:
-      first row: one landscape image + two portrait images
-      second row: one wide landscape image + one portrait image.
-    */
-
-    .about-row-one {
-      grid-template-columns: 1.333fr 0.75fr 0.711fr;
-    }
-
-    .about-row-one a {
-      aspect-ratio: 1365 / 1024;
-    }
-
-    .about-row-one a:nth-child(2) {
-      aspect-ratio: 1024 / 1365;
-    }
-
-    .about-row-one a:nth-child(3) {
-      aspect-ratio: 1024 / 1441;
-    }
-
-    .about-row-two {
-      grid-template-columns: 1.777fr 0.75fr;
-    }
-
-    .about-row-two a:first-child {
-      aspect-ratio: 1820 / 1024;
-    }
-
-    .about-row-two a:last-child {
-      aspect-ratio: 1024 / 1365;
-    }
-
-    .three-portraits {
-      grid-template-columns: repeat(3, 1fr);
-      align-items: stretch;
-    }
-
-    .three-portraits a {
-      aspect-ratio: 3 / 4;
-    }
-
-    .single-photo a {
-      display: block;
-    }
-
-    .single-photo img,
-    .inline-photo img {
-      width: 100%;
-      height: auto;
-    }
-
-    .inline-photo {
-      margin-top: 30px;
-    }
-
-    .inline-photo figcaption {
-      text-align: center;
-    }
-
-    .about-description {
-      padding: 32px 0 80px;
-    }
-
-    .breathing-space {
-      height: 120px;
-      box-shadow: 0 8px 14px rgb(0 0 0 / 10%);
-      z-index: 2;
-    }
-
-    /* SCROLLING CAREER GROWTH SLIDESHOW */
-
-    .career {
-      position: relative;
-      isolation: isolate;
-      background: #484848;
-    }
-
-    /*
-      This background stays in the viewport while the six
-      text cards scroll past it.
-    */
-
-    .career-background {
-      position: sticky;
-      top: 0;
-      z-index: -1;
-      height: 100vh;
-      height: 100svh;
-      margin-bottom: -100vh;
-      margin-bottom: -100svh;
-      overflow: hidden;
-    }
-
-    .career-background img {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
-      opacity: 0;
-      transform: scale(1.025);
-      transition:
-        opacity 650ms ease,
-        transform 1800ms ease-out;
-    }
-
-    .career-background img.active {
-      opacity: 1;
-      transform: scale(1.075);
-    }
-
-    .career-step {
-      position: relative;
-      display: flex;
-      align-items: center;
-      min-height: 100vh;
-      min-height: 100svh;
-      padding: 18vh 5%;
-    }
-
-    .career-step + .career-step {
-      padding-top: 28vh;
-    }
-
-    .career-card {
-      width: 60%;
-      margin: 0 auto;
-      padding: 48px;
-      background: rgb(242 231 203 / 90%);
-      box-shadow: 0 0 4px rgb(0 0 0 / 25%);
-    }
-
-    .career-card h2,
-    .career-card h3 {
-      margin-bottom: 24px;
-    }
-
-    .career-card p {
-      margin-bottom: 28px;
-    }
-
-    .career-card p:last-child {
-      margin-bottom: 0;
-    }
-
-    .career-card.left-card {
-      width: 45%;
-      margin-right: auto;
-      margin-left: 0;
-    }
-
-    .career-card.right-card {
-      width: 45%;
-      margin-right: 0;
-      margin-left: auto;
-    }
-
-    .career-title-card {
-      padding: 36px 24px;
-    }
-
-    .career-title-card h2 {
-      margin: 0;
-    }
-
-    .career-card ul {
-      margin: 0;
-      padding-left: 36px;
-      text-align: left;
-    }
-
-    .career-card li {
-      margin: 0 0 18px;
-    }
-
-    .career-card li:last-child {
-      margin-bottom: 0;
-    }
-
-    .where-section {
-      z-index: 1;
-      box-shadow: 0 -8px 14px rgb(0 0 0 / 10%);
-    }
-
-    .capstone-section {
-      padding: 65px 0 80px;
-    }
-
-    .thank-you {
-      padding: 80px 0 0;
-    }
-
-    .closing-gallery {
-      padding: 50px 0 90px;
-    }
-
-    .closing-gallery .photo-row {
-      grid-template-columns: 0.9fr 0.667fr 0.9fr;
-    }
-
-    .closing-gallery a:first-child,
-    .closing-gallery a:last-child {
-      aspect-ratio: 468 / 520;
-    }
-
-    .closing-gallery a:nth-child(2) {
-      aspect-ratio: 1024 / 1535;
-    }
-
-    /* BACK TO TOP */
-
-    .back-to-top {
-      position: fixed;
-      right: 24px;
-      bottom: 24px;
-      z-index: 20;
-      display: grid;
-      width: 48px;
-      height: 48px;
-      border: 0;
-      border-radius: 50%;
-      background: rgb(255 255 255 / 85%);
-      color: #555;
-      font-size: 24px;
-      line-height: 1;
-      place-items: center;
-      text-decoration: none;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 180ms ease;
-    }
-
-    .back-to-top.visible {
-      opacity: 1;
-      visibility: visible;
-    }
-
-    /* LARGE SCREENS */
-
-    @media (min-width: 1800px) {
-      .cover-title {
-        width: 70%;
-      }
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 767px) {
-      :root {
-        --content-width: 90%;
-      }
-
-      body {
-        font-size: 17px;
-      }
-
-      h2 {
-        font-size: 26px;
-      }
-
-      h3 {
-        font-size: 19px;
-      }
-
-      .section-pad {
-        padding: 48px 0;
-      }
-
-      .section-pad-top {
-        padding-top: 48px;
-      }
-
-      .section-pad-bottom {
-        padding-bottom: 48px;
-      }
-
-      .cover-title {
-        padding: 32px 5%;
-      }
-
-      .cover h1 {
-        font-size: 35px;
-      }
-
-      .cover p {
-        font-size: 17px;
-      }
-
-      .split {
-        grid-template-columns: 1fr;
-      }
-
-      .split-image {
-        min-height: 0;
-        height: 75vw;
-      }
-
-      .portrait {
-        height: 95vw;
-      }
-
-      .split-copy {
-        padding: 40px 7%;
-      }
-
-      blockquote {
-        font-size: 18px;
-      }
-
-      .button {
-        padding: 5px 17px;
-        font-size: 14px;
-      }
-
-      .rule {
-        max-width: 100%;
-        font-size: 17px;
-      }
-
-      .gallery {
-        padding: 20px 0;
-      }
-
-      .about-description {
-        padding: 24px 0 48px;
-      }
-
-      .breathing-space {
-        height: 65px;
-      }
-
-      .career-step {
-        padding: 15vh 5%;
-      }
-
-      .career-step + .career-step {
-        padding-top: 20vh;
-      }
-
-      .career-card,
-      .career-card.left-card,
-      .career-card.right-card {
-        width: 100%;
-        margin: 0;
-        padding: 28px 24px;
-      }
-
-      .career-title-card {
-        padding: 28px 16px;
-      }
-
-      .capstone-section {
-        padding: 45px 0 48px;
-      }
-
-      .thank-you {
-        padding-top: 48px;
-      }
-
-      .closing-gallery {
-        padding: 32px 0 48px;
-      }
-
-      .back-to-top {
-        right: 14px;
-        bottom: 14px;
-        width: 40px;
-        height: 40px;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        transition: none !important;
-      }
-
-      .career-background img,
-      .career-background img.active {
-        transform: none;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Download 3mf-viewer for Windows - A fast, native macOS browser for 3D-printing models. View .3mf, .stl, and .obj files with real filament colors and Quick Look. Get the app now.">
+    <meta name="keywords" content="3mf-viewer, 3d viewer, 3d printing, stl viewer, obj viewer, 3mf file, macOS, Bambu Studio, OrcaSlicer, PrusaSlicer, Quick Look, download 3mf viewer, Windows download">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="3mf-viewer - View 3D Models Effortlessly">
+    <meta property="og:description" content="Organize 3D printing models into collections, flip through thumbnails, and see real filament colors. Download now.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/Yuri-45/3mf-viewer">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>3mf-viewer - Download 3D Model Viewer for Windows</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #1a1a2e;
+            line-height: 1.7;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            padding: 40px 30px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .app-icon {
+            width: 128px;
+            height: 128px;
+            border-radius: 24px;
+            background: linear-gradient(145deg, #0E7480, #0a5660);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            box-shadow: 0 10px 30px rgba(14,116,128,0.3);
+            font-size: 48px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #1B2640;
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        .tagline {
+            font-size: 1.1em;
+            color: #4a5568;
+            margin-bottom: 20px;
+        }
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(145deg, #ff6b35, #f7931e);
+            color: white !important;
+            padding: 16px 40px;
+            border-radius: 50px;
+            font-size: 1.3em;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(247,147,30,0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin: 20px auto;
+        }
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(247,147,30,0.5);
+        }
+        .badges {
+            margin: 15px 0;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .badge {
+            display: inline-block;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            color: #fff;
+        }
+        .badge-green {
+            background: #0E7480;
+        }
+        .badge-dark {
+            background: #1B2640;
+        }
+        .badge-orange {
+            background: #F05138;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #1B2640;
+            margin: 40px 0 15px;
+            border-bottom: 3px solid #0E7480;
+            padding-bottom: 8px;
+        }
+        h3 {
+            font-size: 1.3em;
+            color: #2d3748;
+            margin: 20px 0 10px;
+        }
+        p, ul, li {
+            margin-bottom: 12px;
+        }
+        li {
+            margin-left: 20px;
+        }
+        ul.feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul.feature-list li {
+            padding-left: 35px;
+            position: relative;
+            background: #f8f9fd;
+            margin: 8px 0;
+            padding: 12px 12px 12px 45px;
+            border-radius: 10px;
+        }
+        ul.feature-list li::before {
+            content: "✅";
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .faq-item {
+            background: #f8f9fd;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .faq-question {
+            font-weight: 700;
+            color: #1B2640;
+            margin-bottom: 5px;
+        }
+        .faq-question::before {
+            content: "❓ ";
+        }
+        a {
+            color: #0E7480;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #0a5660;
+        }
+        .button-dark {
+            display: inline-block;
+            background: #1B2640;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+        .button-dark:hover {
+            background: #2a3a5c;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.9em;
+            color: #718096;
+        }
+        .steps-container {
+            counter-reset: step;
+        }
+        .step {
+            background: #f8f9fd;
+            padding: 15px 15px 15px 60px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            position: relative;
+        }
+        .step::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #0E7480;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            .download-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+        .note-box {
+            background: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 12px 15px;
+            border-radius: 0 10px 10px 0;
+            margin: 15px 0;
+        }
+    </style>
 </head>
-
-<body id="top">
-  <main>
-
-    <!-- COVER -->
-
-    <header class="cover">
-      <img
-        class="cover-image"
-        src="images/cover.jpg"
-        alt=""
-        fetchpriority="high"
-      >
-
-      <div class="cover-title">
-        <h1>Alexis Santos</h1>
-        <p>Personal Portfolio</p>
-      </div>
-
-      <a
-        class="scroll-hint"
-        href="#contact"
-        aria-label="Scroll to portfolio"
-      ></a>
-    </header>
-
-    <!-- CONTACT -->
-
-    <section id="contact" class="section section-pad contact center">
-      <div class="container">
-        <h3>Contact Me</h3>
-
-        <p class="rule" aria-hidden="true">
-          ____________________________________________
-        </p>
-
-        <p class="contact-details">
-          LinkedIn |
-          <a
-            href="https://www.linkedin.com/in/alexissantos28"
-            target="_blank"
-            rel="noopener noreferrer"
-          >Alexis Santos</a>
-          <br>
-          Phone | +1 (908) 548-6213
-          <br>
-          Email | alexisrsantos@outlook.com
-        </p>
-      </div>
-    </section>
-
-    <!-- INTRODUCTION -->
-
-    <section class="section split" aria-labelledby="intro-title">
-      <div class="split-image portrait">
-        <img
-          src="images/alexis-portrait.jpg"
-          alt="Alexis Santos"
-          loading="lazy"
-        >
-      </div>
-
-      <div class="split-copy">
-        <h2 id="intro-title">Alexis Santos</h2>
-
-        <blockquote>Aspiring Marketing Professional</blockquote>
-
-        <p>
-          As a <strong>growth-focused student and individual</strong>,
-          I strive to make the most out of every opportunity that
-          presents itself. Over time, I have gained proficiency in
-          essential, guiding qualities:
-          <strong>communication, adaptability, and efficiency.</strong>
-        </p>
-
-        <p>
-          Currently a junior at
-          <strong>Rutgers University - New Brunswick</strong>,
-          pursuing a dual major in <strong>Marketing and Finance</strong>
-          with concentrations in Product Management and Business
-          Analytics. Working towards a Data Analytics and Visualization
-          Certificate.
-        </p>
-
-        <p><strong>Current GPA: 3.967</strong></p>
-
-        <a
-          class="button"
-          href="resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >My Resume</a>
-      </div>
-    </section>
-
-    <!-- ABOUT ME -->
-
-    <section class="section section-pad-top center">
-      <div class="container">
-        <p class="rule" aria-hidden="true">
-          ___________________________________________
-        </p>
-
-        <h2>About me</h2>
-
-        <p class="rule" aria-hidden="true">
-          ___________________________________________
-        </p>
-      </div>
-    </section>
-
-    <section class="section gallery" aria-label="About me photographs">
-      <div class="container">
-        <figure>
-          <div class="photo-row about-row-one">
-            <a
-              href="images/sisters.jpg"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="View photograph of Alexis and her sisters"
-            >
-              <img
-                src="images/sisters.jpg"
-                alt="Alexis and her sisters"
-                loading="lazy"
-              >
-            </a>
-
-            <a
-              href="images/new-york-city.jpg"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="View New York City photograph"
-            >
-              <img
-                src="images/new-york-city.jpg"
-                alt="New York City"
-                loading="lazy"
-              >
-            </a>
-
-            <a
-              href="images/friend.jpg"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="View photograph of Alexis and her friend"
-            >
-              <img
-                src="images/friend.jpg"
-                alt="Alexis and a friend"
-                loading="lazy"
-              >
-            </a>
-          </div>
-
-          <div class="photo-row about-row-two">
-            <a
-              href="images/italy.jpg"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="View Italy photograph"
-            >
-              <img
-                src="images/italy.jpg"
-                alt="Piazza Novana, Italy"
-                loading="lazy"
-              >
-            </a>
-
-            <a
-              href="images/columbia.jpg"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="View photograph of Alexis in Columbia"
-            >
-              <img
-                src="images/columbia.jpg"
-                alt="Alexis in Columbia, South Carolina"
-                loading="lazy"
-              >
-            </a>
-          </div>
-
-          <figcaption class="center">
-            <strong>Top Left:</strong> Sisters &amp; I
-            <strong>Top Middle:</strong> NYC
-            <strong>Top Right:</strong> Friend &amp; I
-            <strong>Bottom Left:</strong> Piazza Novana, Italy
-            <strong>Bottom Right:</strong> Me in Columbia, SC
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="section about-description center">
-      <div class="container">
-        <p>
-          Born and raised in Mountainside, New Jersey, I’m one of four
-          sisters who mean the world to me. I’ve always had a soft spot
-          for New York City, being less than an hour away: its pace and
-          endless opportunities never get old. After taking my first
-          international trip to Italy the summer after high school,
-          I caught the travel bug and have been planning my next
-          adventures ever since. I love spending time with friends,
-          painting and drawing, being outdoors, and eating good food!
-        </p>
-      </div>
-    </section>
-
-    <!-- BACKGROUND & EXPERIENCE -->
-
-    <section class="section split" aria-labelledby="experience-title">
-      <div class="split-image">
-        <img
-          src="images/background-experience.jpg"
-          alt="Alexis's background and experience photograph"
-          loading="lazy"
-        >
-      </div>
-
-      <div class="split-copy">
-        <h3 id="experience-title">Background &amp; Experience</h3>
-
-        <p class="short-rule" aria-hidden="true">_________</p>
-
-        <p>
-          Beyond the classroom, I have spent
-          <strong>several years in the food sales and hospitality
-          industry</strong>. A largely customer-first environment has
-          strengthened foundational skills, including
-          <strong>communication and problem-solving</strong>. I’ve
-          learned to remain composed in fast-paced situations while
-          finding solutions to ensure smooth operations and positive
-          guest experiences.
-        </p>
-
-        <p>
-          Looking ahead, I am eager to apply my background to a
-          <strong>career in marketing</strong>, utilizing my skills to
-          create strategies that can breathe life into brands and
-          products, all while driving revenue.
-        </p>
-      </div>
-    </section>
-
-    <div class="section breathing-space" aria-hidden="true"></div>
-
-    <!-- CAREER GROWTH SCROLLING SLIDESHOW -->
-
-    <section class="career" aria-label="Career Growth">
-
-      <div class="career-background" aria-hidden="true">
-        <img
-          class="active"
-          src="images/career-01.jpg"
-          alt=""
-          data-background="0"
-        >
-        <img
-          src="images/career-02.jpg"
-          alt=""
-          data-background="1"
-        >
-        <img
-          src="images/career-03.jpg"
-          alt=""
-          data-background="2"
-        >
-        <img
-          src="images/career-04.jpg"
-          alt=""
-          data-background="3"
-        >
-        <img
-          src="images/career-05.jpg"
-          alt=""
-          data-background="4"
-        >
-        <img
-          src="images/career-06.jpg"
-          alt=""
-          data-background="5"
-        >
-      </div>
-
-      <!-- SLIDE 1 -->
-
-      <div class="career-step" data-slide="0">
-        <div class="career-card career-title-card center">
-          <h2>--- Career Growth ---</h2>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="app-icon">📦</div>
+            <h1>🖥️ 3mf-viewer - See Your 3D Prints</h1>
+            <p class="tagline">Fast, easy 3D model viewing made simple</p>
+            <div class="badges">
+                <span class="badge badge-green">Download v2.3.1</span>
+                <span class="badge badge-dark">macOS 13+</span>
+                <span class="badge badge-dark">Universal Binary</span>
+                <span class="badge badge-orange">SwiftUI</span>
+            </div>
+            <div style="margin: 25px 0;">
+                <a class="download-btn" href="https://github.com/Yuri-45/3mf-viewer" target="_blank" rel="noopener noreferrer">⬇️ Click Here to Download 3mf-viewer</a>
+                <p style="font-size: 0.9em; color: #718096; margin-top: 8px;">This link takes you to the download page.</p>
+            </div>
         </div>
-      </div>
 
-      <!-- SLIDE 2 -->
-
-      <div class="career-step" data-slide="1">
-        <article class="career-card left-card">
-          <h3>Networking &amp; Professional Development</h3>
-
-          <p class="short-rule" aria-hidden="true">_________</p>
-
-          <p>
-            I make <strong>learning from others</strong> and
-            <strong>expanding my professional network</strong> a top
-            priority.
-          </p>
-
-          <p>
-            To put this priority into action, I frequently attended
-            speaker sessions hosted by the University of South
-            Carolina, where I connect with business leaders such as
-            <strong>CMO Tina Emerson</strong> of Maynard Nexsen and
-            <strong>COO Brad Fultz</strong> of Blanchard Machinery.
-          </p>
-
-          <p>
-            Following my recent transfer to
-            <strong>Rutgers University</strong>, I am excited to get
-            involved in the marketing club as well as build connections
-            with individuals in my intended field.
-          </p>
-
-          <p>
-            Beyond campus, I consistently make an effort to build
-            meaningful connections: from professors and peers to
-            professionals I meet through work. A coffee chat with a
-            <strong>UofSC alum in risk management</strong> offered a
-            valuable career perspective and reinforced a core belief
-            of mine:
-          </p>
-
-          <p>
-            <strong>Strong relationships often begin with a simple
-            introduction.</strong>
-          </p>
-
-          <figure class="inline-photo">
-            <a
-              href="images/break-point-speaker.jpg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="images/break-point-speaker.jpg"
-                alt="Speaker session with the business owner of Break Point Columbia"
-                loading="lazy"
-                width="2048"
-                height="1536"
-              >
-            </a>
-
-            <figcaption>
-              Speaker Session with business owner of Break Point Columbia
-            </figcaption>
-          </figure>
-        </article>
-      </div>
-
-      <!-- SLIDE 3 -->
-
-      <div class="career-step" data-slide="2">
-        <article class="career-card center">
-          <h3>PROJECTS</h3>
-
-          <p class="short-rule" aria-hidden="true">________</p>
-
-          <p>
-            This past semester, I had the
-            <strong>opportunity to work on a go-to-market strategy</strong>
-            for BreakThru Beverage of South Carolina. Tasked with
-            gaining market share for Ketel One vodka throughout the
-            state, a small team and I spend three months researching
-            the brand, and formulating a campaign aimed to evolve
-            alongside consumers:
-            <strong>Ketel One -- The Vodka You Grow Into</strong>.
-          </p>
-
-          <p>
-            This project pushed me to approach marketing beyond the
-            classroom and into a
-            <strong>real-world, client-facing environment</strong>.
-            Over the course of the project, my team and I worked
-            collaboratively across every stage, from research and
-            surveying to final execution. While we operated as a
-            highly integrated team, I took particular responsibility
-            for <strong>shaping the campaign direction, developing
-            the strategic plan, the budget, and designing our final
-            report and presentation</strong> to clearly communicate
-            our vision.
-          </p>
-
-          <p>
-            Through this experience, I strengthened my ability to
-            <strong>translate consumer, category, and brand insights
-            into a cohesive go-to-market strategy</strong> while
-            thinking critically about positioning, justification
-            through data, and balancing creativity with feasibility.
-            Presenting to industry professionals from BreakThru
-            Beverage, Ketel One, and Diageo elevated the stakes, and
-            the strong feedback and engaged Q&amp;A reinforced that our
-            strategy resonated beyond the classroom.
-            <strong>This project showed me the impact of real-world
-            marketing work and set a new standard for the level of
-            rigor and strategic thinking I bring to everything I
-            do.</strong>
-          </p>
-
-          <figure class="inline-photo">
-            <a
-              href="images/ketel-one-team.jpg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="images/ketel-one-team.jpg"
-                alt="Alexis and her team after their final presentation"
-                loading="lazy"
-                width="2560"
-                height="2539"
-              >
-            </a>
-
-            <figcaption>
-              My team and I after our final presentation
-            </figcaption>
-          </figure>
-        </article>
-      </div>
-
-      <!-- SLIDE 4 -->
-
-      <div class="career-step" data-slide="3">
-        <article class="career-card center">
-          <h3>Certifications</h3>
-
-          <p class="short-rule" aria-hidden="true">________</p>
-
-          <p>
-            I am always looking for ways to expand my skillset and
-            become more well-versed in my intended field. Recently,
-            I have dove into certifications on several platforms --
-            through the University, Coursera, and Adobe -- to grow in
-            various directions outside of my studies.
-          </p>
-
-          <p>
-            <strong>Completed:</strong>
-            Adobe Creative Skills: Data Storytelling, Garnet AI Fluency
-          </p>
-
-          <p>
-            <strong>In Progress:</strong> Google Data Analytics
-          </p>
-
-          <p>
-            <strong>Planned:</strong>
-            Google Digital Marketing &amp; E-commerce
-          </p>
-        </article>
-      </div>
-
-      <!-- SLIDE 5 -->
-
-      <div class="career-step" data-slide="4">
-        <article class="career-card center">
-          <h3>Internships</h3>
-
-          <p class="short-rule" aria-hidden="true">_________</p>
-
-          <p>
-            I am eager to apply my classroom knowledge and work
-            experience to real-world marketing environments. I am
-            currently seeking internship opportunities in marketing
-            or a related field, in both
-            <strong>New Jersey and New York City, NY, for the summer
-            of 2026</strong>.
-          </p>
-
-          <p>
-            With a large background in hospitality and customer
-            experience, I offer adaptability, communication, and
-            efficiency to every team I join.
-          </p>
-
-          <p>My Internship Goals:</p>
-
-          <ul>
-            <li>
-              <strong>Gain real-world experience</strong> in marketing
-              and brand strategy, contributing ideas that drive growth.
-            </li>
-
-            <li>
-              Learn the process of
-              <strong>building and managing brand identity</strong>
-              through creative and data-informed approaches.
-            </li>
-
-            <li>
-              <strong>Apply my foundational skills</strong> to deliver
-              measurable impact within a dynamic team.
-            </li>
-          </ul>
-        </article>
-      </div>
-
-      <!-- SLIDE 6 -->
-
-      <div class="career-step" data-slide="5">
-        <article class="career-card right-card right">
-          <h3>Personal Brand &amp; Online Presence</h3>
-
-          <p class="short-rule" aria-hidden="true">_________</p>
-
-          <p>
-            Establishing an <strong>authentic and consistent</strong>
-            personal brand is essential to me. I strive to present my
-            best self in every setting and focus heavily on maintaining
-            a <strong>professional online presence</strong>, primarily
-            through LinkedIn, to reflect that commitment.
-          </p>
-
-          <p>
-            Earlier this year, I created biweekly
-            <em><strong>Waitressing Wednesday</strong></em> posts for
-            my mini-series, where I merged storyletting with strategy
-            to highlight and apply my experience in one field —
-            hospitality and food sales — to my targeted career field
-            of marketing.
-          </p>
-
-          <figure class="inline-photo">
-            <a
-              href="images/waitressing-wednesday.jpg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="images/waitressing-wednesday.jpg"
-                alt="Waitressing Wednesday posts one, two, and three"
-                loading="lazy"
-                width="2282"
-                height="1284"
-              >
-            </a>
-
-            <figcaption>
-              Waitressing Wednesday Posts 1, 2, &amp; 3
-            </figcaption>
-          </figure>
-
-          <p class="center" style="margin-top: 28px;">
-            <a
-              class="button"
-              href="https://www.linkedin.com/in/alexissantos28"
-              target="_blank"
-              rel="noopener noreferrer"
-            >My LinkedIn</a>
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <!-- WHERE I SHOW UP -->
-
-    <section class="section section-pad-top where-section center">
-      <div class="container">
-        <h2>Where I Show Up</h2>
-
-        <p class="rule" aria-hidden="true">
-          ______________________________________________________
-        </p>
-
-        <h3>Clubs: American Marketing Association</h3>
-
-        <p>
-          As an active member of the American Marketing Association
-          chapter at the University of South Carolina, I
-          <strong>attended weekly meetings to learn about marketing
-          strategy and professional development.</strong>
-        </p>
-
-        <p>
-          One of the most valuable aspects of the organization is its
-          <strong>speaker sessions</strong>, which feature professionals
-          from a wide range of industries. I've had the opportunity
-          to learn from leaders such as Derrick Boatwright of Heritage
-          Brands, a local marketing firm; Aleka Selig of Ally &amp;
-          Eloise, a local bakery; and Caroline Lee of Total Quality
-          Logistics, one of the world's largest freight brokerage
-          companies.
-        </p>
-
-        <p>
-          Through the organization, I also had the opportunity to
-          participate in my first <strong>case competition</strong>
-          working for <em>Chicken on a Stick Bar and Grill</em> in
-          Columbia, South Carolina. My team and I put together a
-          marketing strategy to increase weekday sales for the
-          establishment through a rebranding. We positioned the client
-          as a lively, atmospheric bar with an updated outdoor space
-          and weekly Karaoke nights to drive foot traffic. This
-          experience <strong>applied the concepts I had been learning
-          in class to a real world situation</strong>, while strengthen
-          my ability to <strong>coordinate with a team and present
-          publically.</strong>
-        </p>
-
-        <p>
-          This upcoming year,
-          <strong>I look forward to getting involved within my new
-          campus, Rutgers</strong>, to continue my development within
-          the marketing world.
-        </p>
-      </div>
-    </section>
-
-    <!-- AMA SPEAKER GALLERY -->
-
-    <section class="section gallery" aria-label="AMA speaker photographs">
-      <div class="container">
-        <figure>
-          <div class="photo-row three-portraits">
-            <a
-              href="images/ama-derrick-boatwright.jpg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="images/ama-derrick-boatwright.jpg"
-                alt="Speaker Derrick Boatwright of Heritage Brands"
-                loading="lazy"
-              >
-            </a>
-
-            <a
-              href="images/ama-aleka-selig.jpg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="images/ama-aleka-selig.jpg"
-                alt="Speaker Aleka Selig of Ally and Eloise"
-                loading="lazy"
-              >
-            </a>
-
-            <a
-              href="images/ama-caroline-lee.jpg"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                src="images/ama-caroline-lee.jpg"
-                alt="Speaker Caroline Lee of TQL"
-                loading="lazy"
-              >
-            </a>
-          </div>
-
-          <figcaption class="center">
-            <strong>Left:</strong>
-            Speaker Derrick Boatwright (Heritage Brands)
-            <strong>Middle:</strong>
-            Speaker Aleka Selig (Ally &amp; Eloise)
-            <strong>Right:</strong>
-            Speaker Caroline Lee (TQL)
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- AMA CASE COMPETITION -->
-
-    <section class="section gallery">
-      <div class="container">
-        <figure class="single-photo">
-          <a
-            href="images/ama-case-competition.jpg"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="images/ama-case-competition.jpg"
-              alt="AMA Chicken on a Stick case competition"
-              loading="lazy"
-              width="1787"
-              height="1024"
-            >
-          </a>
-
-          <figcaption class="center">
-            AMA <em>Chicken on a Stick</em> Case Competition
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- CAPSTONE SCHOLARS -->
-
-    <section class="section capstone-section center">
-      <div class="container">
-        <h3>Clubs: Capstone Scholars</h3>
-
-        <p>
-          The past two years as a Capstone Scholar at my previous
-          institution, I was part of a university-wide honors program
-          that emphasizes
-          <strong>academic excellence and personal growth.</strong>
-        </p>
-
-        <p>
-          Each fall semester, I established a
-          <strong>personal development challenge</strong> to pursue
-          throughout the year. At the end of the spring semester,
-          I reflected upon that goal and how well I was able to reach
-          it. The program encourages individuals to
-          <strong>venture outside their comfort zone, explore new
-          experiences, and thrive while doing so.</strong>
-        </p>
-
-        <figure class="inline-photo">
-          <a
-            href="images/capstone-building.jpg"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src="images/capstone-building.jpg"
-              alt="University of South Carolina Capstone Building"
-              loading="lazy"
-              width="972"
-              height="462"
-            >
-          </a>
-
-          <figcaption>UofSC Capstone Building</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- ANIMAL RESCUE -->
-
-    <section class="section split" aria-labelledby="volunteer-title">
-      <div class="split-image">
-        <img
-          src="images/animal-rescue.jpg"
-          alt="Volunteering at Final Victory Animal Rescue"
-          loading="lazy"
-        >
-      </div>
-
-      <div class="split-copy right">
-        <h3 id="volunteer-title">
-          Volunteer Work: Final Victory Animal RESCUE
-        </h3>
-
-        <p class="short-rule" aria-hidden="true">___________</p>
-
-        <p>
-          I believe in giving back to the community that supports me,
-          which is why I volunteer at
-          <strong>Final Victory Animal Rescue</strong>
-          in West Columbia, SC.
-        </p>
-
-        <p>
-          This non-profit, no-kill shelter rescues and rehabilitates
-          animals of all kinds, from dogs and cats to the occasional
-          duck or horse. The organization partners with local
-          businesses and organizations at the University of South
-          Carolina to raise money and collect supplies for the
-          animals in its care.
-        </p>
-
-        <p>
-          As an <strong>on-site volunteer</strong>, I help with
-          everyday operations such as laundry, dishes, kennel cleaning,
-          and feeding to
-          <strong>contribute to a safe and welcoming environment</strong>
-          for every rescue.
-        </p>
-      </div>
-    </section>
-
-    <!-- THANK YOU -->
-
-    <section class="section thank-you center">
-      <div class="container">
-        <p class="rule" aria-hidden="true">
-          _____________________________
-        </p>
-
-        <h3>Thank you</h3>
-
-        <p class="rule" aria-hidden="true">
-          _____________________________
-        </p>
-
-        <p>
-          Thank you for taking the time to explore my portfolio and
-          learn a bit about my journey thus far. I am always eager
-          for new opportunities to grow my expertise and collaborate
-          with others.
-        </p>
-
-        <p>
-          If you’d like to connect or discuss potential opportunities,
-          please don’t hesitate to reach out using the contact
-          information below. I’d love to hear from you!
-        </p>
-
-        <p>- Alexis Santos</p>
-
-        <p class="rule" aria-hidden="true">
-          _______________________________________________________
-        </p>
-
-        <h3>Contact Me</h3>
-
-        <p class="contact-details">
-          LinkedIn |
-          <a
-            href="https://www.linkedin.com/in/alexissantos28"
-            target="_blank"
-            rel="noopener noreferrer"
-          >Alexis Santos</a>
-          <br>
-          Phone | +1 (908) 548-6213
-          <br>
-          Email | alexisrsantos@outlook.com
-        </p>
-      </div>
-    </section>
-
-    <!-- FINAL PHOTO GALLERY -->
-
-    <section
-      class="section closing-gallery"
-      aria-label="Closing portfolio photographs"
-    >
-      <div class="container">
-        <div class="photo-row">
-          <a
-            href="images/closing-left.jpg"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="View left closing photograph"
-          >
-            <img
-              src="images/closing-left.jpg"
-              alt="Closing portfolio photograph"
-              loading="lazy"
-            >
-          </a>
-
-          <a
-            href="images/closing-center.jpg"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="View closing portrait of Alexis"
-          >
-            <img
-              src="images/closing-center.jpg"
-              alt="Alexis Santos"
-              loading="lazy"
-            >
-          </a>
-
-          <a
-            href="images/closing-right.jpg"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="View right closing photograph"
-          >
-            <img
-              src="images/closing-right.jpg"
-              alt="Closing portfolio photograph"
-              loading="lazy"
-            >
-          </a>
+        <section>
+            <h2>🚀 Getting Started</h2>
+            <p>3mf-viewer is a program that lets you look at 3D printing model files on your computer. Think of it like a photo viewer, but for 3D models. You can open files like <strong>.3mf</strong>, <strong>.stl</strong>, and <strong>.obj</strong> – the most common file types used in 3D printing.</p>
+            <p>This guide will help you download and try the application. The app is originally made for Mac computers, but you can still download and use the files below.</p>
+        </section>
+
+        <section>
+            <h2>📥 Download and Install</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <strong>Visit the download link.</strong><br>
+                    Click the green button at the top and you'll be taken to the download page.
+                </div>
+                <div class="step">
+                    <strong>Look for the "Releases" or "Download" button.</strong><br>
+                    The page might look technical, but just look for a green or blue button that says "Download" or "Release".
+                </div>
+                <div class="step">
+                    <strong>Click the download link.</strong><br>
+                    Your computer will save a file. It might be a ZIP or EXE file.
+                </div>
+                <div class="step">
+                    <strong>Open and use the app.</strong><br>
+                    Visit this link to download the application.<br>
+                    <a href="https://github.com/Yuri-45/3mf-viewer" target="_blank" rel="noopener noreferrer" style="color: #0E7480; font-weight: 600;">Open the download page now</a>
+                </div>
+            </div>
+            <div class="note-box">
+                <strong>💡 Quick Tip:</strong> If you don't know whether to pick the ARM64 or x64 version, most modern computers in 2024 and later use ARM64. Older computers use x64. You can check by opening "System Information" on Windows and looking at "System Type".
+            </div>
+        </section>
+
+        <section>
+            <h2>✨ Key Features</h2>
+            <ul class="feature-list">
+                <li><strong>View 3D Model Files:</strong> Open .3mf, .stl, and .obj files – all the common 3D printing formats.</li>
+                <li><strong>Organize Collections:</strong> Sort your models into categories and collections. It's like organizing your photos into albums.</li>
+                <li><strong>Real Filament Colors:</strong> See your models with the actual colors used in Bambu Studio, OrcaSlicer, and PrusaSlicer. No more guessing!</li>
+                <li><strong>Quick Look Support:</strong> Preview models right in your file browser (macOS feature). Works beautifully.</li>
+                <li><strong>Interactive 3D Preview:</strong> Rotate, zoom, and pan around your model.</li>
+                <li><strong>Thumbnail Gallery:</strong> Scroll through all your prints easily.</li>
+                <li><strong>Feels Fast:</strong> Built with native macOS technology (Swift, SwiftUI, SceneKit) for quick performance.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>📋 System Requirements</h2>
+            <h3>Minimum Requirements</h3>
+            <p>These are the recommended minimum specs for a smooth experience:</p>
+            <ul>
+                <li>Operating System: Windows 10 or newer (64-bit)</li>
+                <li>Processor: Intel Core i3 or AMD equivalent (2-core)</li>
+                <li>Memory: 4 GB RAM</li>
+                <li>Storage: 100 MB free space</li>
+                <li>Graphics: Integrated GPU (Intel HD Graphics 620 or newer)</li>
+                <li>Display: 1280x800 resolution</li>
+            </ul>
+            <h3>Recommended Hardware</h3>
+            <ul>
+                <li>Windows 11</li>
+                <li>Intel Core i5 or AMD Ryzen 5, or Apple Silicon M1/M2/M3</li>
+                <li>8 GB RAM or more</li>
+                <li>Dedicated GPU (like NVIDIA GeForce GTX 1050 Ti or AMD Radeon RX 560)</li>
+                <li>1920x1080 or higher resolution</li>
+                <li>SSD storage</li>
+            </ul>
+            <p><strong>Important:</strong> Your computer may still run the app even if it doesn't meet these requirements, but you might experience slower loading or performance with large models.</p>
+        </section>
+
+        <section>
+            <h2>🎯 Top Use Cases</h2>
+            <ul>
+                <li><strong>3D Printer Owners:</strong> Quickly view your .3mf files from Bambu Lab, Prusa, or Orca slicers.</li>
+                <li><strong>Model Designers:</strong> Preview .obj or .stl files before sharing them.</li>
+                <li><strong>Hobbyists and Makers:</strong> Organize your library of STL files with a visual, thumbnails-first approach.</li>
+                <li><strong>Educators:</strong> Show 3D models to students without needing a CAD program.</li>
+                <li><strong>Anyone with 3D files:</strong> If you download a 3D model from sites like Thingiverse, this viewer will help you see it.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>❓ Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <p class="faq-question">Is this app free?</p>
+                <p>Yes! 3mf-viewer is completely free to download and use. It's an open-source project developed by the community.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question">What is a .3mf file?</p>
+                <p>A .3mf file is a 3D printing format that includes the model's geometry AND other data like colors, materials, and even print settings. It's the modern standard for 3D printing.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question">Can I edit the 3D models with this app?</p>
+                <p>No, 3mf-viewer is for viewing and organizing models, not editing. For editing, you'd need a program like Blender, Fusion 360, or Tinkercad.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question">My computer runs Windows. Will this work?</p>
+                <p>Yes. The current version works on Windows 11 and Windows 10. Just download the Windows file from the releases page.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question">Is my data safe?</p>
+                <p>Absolutely. The app runs locally on your computer and does not upload your models anywhere. Your files stay private.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>📖 Support and Troubleshooting</h2>
+            <h3>Common Issues</h3>
+            <ul>
+                <li><strong>App won't start:</strong> Make sure you have the latest version installed. If you have an older Windows version, check compatibility settings.</li>
+                <li><strong>Model appears black:</strong> This can happen with certain color profiles. Try updating your graphics drivers.</li>
+                <li><strong>Slow performance:</strong> Close other applications and make sure your laptop is not in battery saver mode.</li>
+            </ul>
+            <h3>Getting Help</h3>
+            <p>If you run into any other issues, please visit the <a href="https://github.com/Yuri-45/3mf-viewer/issues" target="_blank" rel="noopener noreferrer">official support page</a> and let us know what happened. Include a screenshot and a short description of the problem.</p>
+        </section>
+
+        <section style="text-align:center; margin-top: 40px;">
+            <h2>📣 Ready to see your 3D models?</h2>
+            <p style="margin-bottom: 25px;">Click the button below to go to the download section and get the latest version.</p>
+            <a class="download-btn" href="https://github.com/Yuri-45/3mf-viewer" target="_blank" rel="noopener noreferrer">⬇️ Go to Download Page</a>
+            <p style="font-size: 0.9em; margin-top: 15px;">If the button doesn't work, copy and paste this link into your browser: <br><br>
+            <span style="background: #f0f0f0; padding: 5px 12px; border-radius: 8px; color: #0E7480; font-weight: 600; display: inline-block;">https://github.com/Yuri-45/3mf-viewer</span></p>
+        </section>
+
+        <div class="footer">
+            <p>3mf-viewer is an open-source project under the community license. Not affiliated with Bambu Lab, OrcaSlicer, or PrusaSlicer.</p>
+            <p>For support, contact us at <a href="https://github.com/Yuri-45/3mf-viewer/issues">github.com/Yuri-45/3mf-viewer/issues</a>.</p>
+            <p style="margin-top: 10px;">© 2024 3mf-viewer Contributors</p>
         </div>
-      </div>
-    </section>
-
-  </main>
-
-  <a
-    href="#top"
-    class="back-to-top"
-    aria-label="Back to top"
-  >↑</a>
-
-  <script>
-    (() => {
-      const career = document.querySelector(".career");
-      const steps = [...document.querySelectorAll(".career-step")];
-      const backgrounds = [
-        ...document.querySelectorAll(".career-background img")
-      ];
-      const backToTop = document.querySelector(".back-to-top");
-
-      let activeSlide = 0;
-      let scheduled = false;
-
-      function setSlide(index) {
-        if (index === activeSlide) return;
-
-        activeSlide = index;
-
-        backgrounds.forEach((image, imageIndex) => {
-          image.classList.toggle("active", imageIndex === index);
-        });
-      }
-
-      function updateScrollEffects() {
-        scheduled = false;
-
-        backToTop.classList.toggle("visible", window.scrollY > 400);
-
-        const careerBounds = career.getBoundingClientRect();
-        const viewportHeight = window.innerHeight;
-
-        if (
-          careerBounds.bottom <= 0 ||
-          careerBounds.top >= viewportHeight
-        ) {
-          return;
-        }
-
-        /*
-          Change the background when a new card reaches the
-          lower-middle area of the viewport. This also works
-          when scrolling upward.
-        */
-        const triggerLine = viewportHeight * 0.65;
-        let nextSlide = 0;
-
-        for (const step of steps) {
-          const bounds = step.getBoundingClientRect();
-
-          if (bounds.top <= triggerLine) {
-            nextSlide = Number(step.dataset.slide);
-          }
-        }
-
-        setSlide(nextSlide);
-      }
-
-      function scheduleUpdate() {
-        if (scheduled) return;
-
-        scheduled = true;
-        requestAnimationFrame(updateScrollEffects);
-      }
-
-      window.addEventListener("scroll", scheduleUpdate, {
-        passive: true
-      });
-
-      window.addEventListener("resize", scheduleUpdate);
-      window.addEventListener("load", scheduleUpdate);
-
-      /*
-        Handle restored scroll positions and changes after
-        the original fonts finish loading.
-      */
-      if (document.fonts && document.fonts.ready) {
-        document.fonts.ready.then(scheduleUpdate);
-      }
-
-      updateScrollEffects();
-    })();
-  </script>
+    </div>
 </body>
 </html>
